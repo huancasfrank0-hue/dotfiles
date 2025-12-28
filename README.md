@@ -2,7 +2,15 @@
 
 ¡Hola! 👋 Este es mi rincón de configuraciones para Arch Linux. Sigo aprendiendo y dándole forma a todo, así que ten en cuenta que **el proyecto está en beta**. Todavía estoy puliendo cosas, pero aquí comparto lo que ya me funciona y se ve genial.
 
-Uso **Hyprland** porque me encantan las animaciones fluidas y el estilo minimalista. ¡Espero que te sirva de base o inspiración!
+## 📸 Galería del Setup
+
+| Escritorio | Terminal |
+|---|---|
+| ![Escritorio](./escritorio.jpeg) | ![Terminal](./terminal.jpeg) |
+
+| Menú de Apagado | Visualizador CAVA |
+|---|---|
+| ![Power](./power_menu.jpeg) | ![Cava](./cava.jpeg) |Uso **Hyprland** porque me encantan las animaciones fluidas y el estilo minimalista. ¡Espero que te sirva de base o inspiración!
 
 ## ✨ ¿Qué tiene este setup?
 - **Hyprland:** Con bordes animados que cambian de color y transparencias.
