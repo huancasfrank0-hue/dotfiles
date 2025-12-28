@@ -1,0 +1,73 @@
+/* 1. Mantenemos tu fuente y base */
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* 2. Definimos la animación del gradiente (El movimiento) */
+@keyframes gradient_border {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 3. Aplicamos el efecto de borde animado a todas tus cápsulas */
+#workspaces, #clock, #cpu, #memory, #pulseaudio, #custom-cava, 
+#custom-launcher, #custom-terminal, #temperature, #disk, #tray {
+    /* Fondo oscuro sólido */
+    background-color: #111111;
+    
+    /* El truco del borde animado (Cian y Magenta) */
+    border: 2px solid transparent;
+    background-image: linear-gradient(#111111, #111111), 
+                      linear-gradient(45deg, #00ffff, #ff00ff, #00ffff, #ff00ff);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    
+    /* Configuración de la animación */
+    background-size: 400% 400%;
+    animation: gradient_border 6s ease infinite;
+    
+    border-radius: 15px;
+    margin: 4px 6px;
+    padding: 0px 15px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+/* 4. Mantenemos tus colores específicos para los iconos/texto */
+#custom-launcher { color: #7db9f5; font-size: 18px; }
+#custom-terminal { color: #bb9af7; }
+#cpu { color: #9ece6a; }
+#memory { color: #e0af68; }
+#temperature { color: #f7768e; }
+#clock { color: #7aa2f7; }
+#pulseaudio { color: #89dceb; }
+#custom-cava { color: #89dceb; font-size: 18px; }
+
+/* 5. Tus efectos de interacción */
+#workspaces button:hover {
+    background: #7aa2f7;
+    color: #1a1b26;
+    border-radius: 10px;
+}
+
+#pulseaudio.muted {
+    background-color: #f38ba8;
+    color: #11111b;
+}
+
+#custom-power {
+    color: #f7768e;
+    font-size: 18px;
+    padding: 0 15px;
+}
+
+/* Espaciado de los grupos */
+.modules-right, .modules-center, .modules-left {
+    margin: 5px;
+}
